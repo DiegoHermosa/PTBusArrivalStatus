@@ -58,15 +58,52 @@ The dataset is imbalance: <br/>
 ![image](https://github.com/DiegoHermosa/PTBusArrivalStatus/assets/160977826/6fc415a4-eeb5-45a8-9a34-f394a7b47e96)
 
 <br/>
-The correlation allowed to identified some featues with a high correlation between them:<br/>
-![image](https://github.com/DiegoHermosa/PTBusArrivalStatus/assets/160977826/116b8a4a-d532-4b06-8c57-9752b4893c8d)
+The correlation allowed to identified some featues with a high correlation between which were removed:<br/>
 
-
+![Screen Shot 2024-07-06 at 11 59 06 PM](https://github.com/DiegoHermosa/PTBusArrivalStatus/assets/160977826/8ff8675d-5d44-422c-8e18-5e420a0eff8e)
 
 <br/>
 
+### Models and tools ### 
+1. For the training I used 4 classification models in order to find the most optimal one:<br/>
+   - Logistic Regression
+   - KNN
+   - Decision Tree
+   - SVM
+2. Cross validation: GridSearchCV with hyperparameters.
+3. To balance the dataset I used SMOTE to oversample the minor of the classes.
 
+### Model Evaluation ###
+Based on the f1 score, SVC has the best score, followed by KNN which is very close behind. SVC performed well despite it took more time, the KNN was really fast. <br/>
 
+![image](https://github.com/DiegoHermosa/PTBusArrivalStatus/assets/160977826/5f8229b6-6b4c-4754-adaf-4f96e6f19d4f)
 
+<br/>
 
+![image](https://github.com/DiegoHermosa/PTBusArrivalStatus/assets/160977826/26c79dc4-1bcc-405a-8066-de1b68362669)
+
+<br/>
+
+### Feature Importances ###
+![image](https://github.com/DiegoHermosa/PTBusArrivalStatus/assets/160977826/2ddabcf4-ca8e-4241-b399-373832a1ede5)
+
+<br/>
  
+#### DifferencePrevBusIn #### 
+This feature has an important influence on the prediction as it contains the difference between the current arrival time and the previous one. As this value increases the status tends to be late otherwie as it decreases the status will be early.
+
+#### TripSpeedAvg #### 
+The speed average of the bus during the trip impacts on the status even though the buses must not exceed the city speed limits, there are times when the speed is reduced due to traffic impacting the bus can meet the frequency of arrivals to the stop.
+
+#### PeakHour #### 
+The peak hour has an important influence because the city will have more traffic on those hours, more traffic and more people using the buses causing more stop duration.
+
+
+### Next Steps and Recomendations ### 
+1. Include new features like the weather and the passenger counting.
+
+### References ### 
+1. About imbalanced datasets and the oversampling techniques:
+   - https://machinelearningmastery.com/multi-class-imbalanced-classification/
+   - https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/
+   - https://towardsdatascience.com/the-right-way-of-using-smote-with-cross-validation-92a8d09d00c7
