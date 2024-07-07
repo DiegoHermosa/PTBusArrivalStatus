@@ -26,14 +26,14 @@ The following notebook contains all the development of the analysis carried out.
 - ID: record unique ID
 - UnitID: Unique ID assigned to the Bus unit.
 - StopID: Unique ID assigned to a Bus Stop.
-- StopNumber: Friendly name assigned to Stop, in general this is define by the Bus Company.
+- StopNumber: Friendly name assigned to Stop, this is defined by the Bus Company to name each Route Stop.
 - DateIN: Date time when the Bus arrived to the Stop.
 - DateOUT: Date time when Bus left the Stop.
 - WeekDay: Day name of the arrival date time.
 - PrevWeekDay: Day name of the previous arrival date time.
-- PeakHour: (Yes/No) flag to mark the if traffic is at its worst between 7 a.m. and 9 a.m. and 4 p.m. and 7 p.m.
+- PeakHour: Flag to mark as Yes/No if traffic is at its worst between 7 a.m. and 9 a.m. and 4 p.m. and 7 p.m.
 - StopDuration: time spent by the bus within the Stop.
-- PrevDateIn: Date time when the previous bus arrived to the current stop.
+- PrevDateIn: Date time when the previous bus has arrived to the current stop.
 - DifferencePrevBusIn: Time difference between PrevDateIn and DateIN.
 - TripDuration: Time spent by the bus to complete a trip.
 - Odometer: Bus odometer when it arrived to stop at DateIn.
@@ -54,7 +54,7 @@ The following notebook contains all the development of the analysis carried out.
 4. Categorical features like PeakHour and WeekDay were transformed to numerical values. <br/>
 
 #### Correlations and Imbalance: ####
-The dataset is imbalance: <br/>
+The dataset is imbalanced: <br/>
 ![image](https://github.com/DiegoHermosa/PTBusArrivalStatus/assets/160977826/6fc415a4-eeb5-45a8-9a34-f394a7b47e96)
 
 <br/>
