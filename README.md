@@ -3,8 +3,8 @@
 Can the Public Tranportation Bus Arrival to Stop be predicted as On Time, Early Or Late?
 
 ### Data: ### 
-The data comes from the Public Trasportation History database that the company I work for has developed for Public Transportation Company. 
-I've created the dataset applying the filters to extract bus arrival to stop data for a single Stop and for a date range of 3 months(April-2024 to June-2024).
+The data comes from the Public Trasportation History database that the company I work for has developed for a Public Transportation Company. I extracted the bus arrival to stop data filtering a single Stop and a date range of 3 months (April-2024 to June-2024).
+
 
 The data can be found in this link
 
